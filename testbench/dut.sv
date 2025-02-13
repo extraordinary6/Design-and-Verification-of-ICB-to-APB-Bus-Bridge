@@ -7,6 +7,7 @@
 //=====================================================================
 
 `timescale 1ns/1ps
+`include "cfig.svh"
 
 module dut (
     icb_bus     icb,
@@ -29,4 +30,31 @@ module dut (
 
 // other testbench modules if needed
     
+// assertion bind
+`ifdef CHECK
+    bind dut_top icb_assertion 
+    icb_assertion_bind_dut_top (
+        .icb(           icb.others      )
+    );
+
+    bind dut_top apb_assertion #(.ID(0))
+    apb_assertion_bind_dut_top0 (
+        .apb(           apb0.others      )
+    );
+
+    bind dut_top apb_assertion #(.ID(1))
+    apb_assertion_bind_dut_top1 (
+        .apb(           apb1.others      )
+    );
+
+    bind dut_top apb_assertion #(.ID(2))
+    apb_assertion_bind_dut_top2 (
+        .apb(           apb2.others      )
+    );
+
+    bind dut_top apb_assertion #(.ID(3))
+    apb_assertion_bind_dut_top3 (
+        .apb(           apb3.others      )
+    );
+`endif
 endmodule

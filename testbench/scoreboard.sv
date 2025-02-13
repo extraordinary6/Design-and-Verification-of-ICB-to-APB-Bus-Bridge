@@ -70,7 +70,7 @@ package scoreboard_pkg;
             icb_trans icb_mon2;
             apb_trans apb_mon;
 
-            $display("Scoreboard Compare Program Begin !");
+            $display("[TB- SBD ] Scoreboard Compare Program Begin !");
 
             forever begin
                 this.icb2sb.get(icb_mon1); 
@@ -89,10 +89,6 @@ package scoreboard_pkg;
                     else if(icb_mon1.addr == WDATA_ADDR) // write wdata to apb, maybe write apb or read apb
                     begin
                         
-
-                        this.icb2sb.get(icb_mon2); // apb write: data packet
-                                                   // apb read: empty packet
-
                         ctrl_packet = key ^ masked_data1;  // decrypt
                         
                         if(ctrl_packet[0] == 0)    // decode
@@ -101,43 +97,59 @@ package scoreboard_pkg;
                             addr_g = ctrl_packet[31:8];
                             sel_g = ctrl_packet[7:2];
                             
-                            sel_queue.push_back(sel_g);
-                            
-                            if (ctrl_packet[1] == 1)  // if apb is write
+                            if(sel_g == S0 || sel_g == S1 || sel_g == S2 || sel_g == S3)
                             begin
+                                sel_queue.push_back(sel_g);
 
-                                case (sel_queue.pop_front()) // get the data from the mailbox of apb agent
-                                    S0: this.apb2sb0.get(apb_mon);
-                                    S1: this.apb2sb1.get(apb_mon);
-                                    S2: this.apb2sb2.get(apb_mon);
-                                    S3: this.apb2sb3.get(apb_mon);
-                                default: $display("APB slave selection signal error!");
-                                endcase
+                                this.icb2sb.get(icb_mon2); // apb write: data packet
+                                                           // apb read: empty packet
+                            
+                                if (ctrl_packet[1] == 1)  // if apb is write
+                                begin
 
+                                    case (sel_queue.pop_front()) // get the data from the mailbox of apb agent
+                                        S0: this.apb2sb0.get(apb_mon);
+                                        S1: this.apb2sb1.get(apb_mon);
+                                        S2: this.apb2sb2.get(apb_mon);
+                                        S3: this.apb2sb3.get(apb_mon);
+                                    default: $display("[TB- SBD ] APB slave selection signal error!");
+                                    endcase
+
+                                    total_cases += 1;
+                                    for (int i = 0; i < 8; i++)  // get the data after mask
+                                    begin
+                                        masked_data2[i*8 +: 8] = icb_mon2.wdata[i*8 +: 8] & {8{~icb_mon2.mask[i]}};
+                                    end
+
+                                    data_packet = key ^ masked_data2;
+
+                                    wdata_g = data_packet[31:1];
+
+                                    if(wdata_g == apb_mon.wdata && addr_g == apb_mon.addr && 
+                                    write_g == apb_mon.write)
+                                    begin
+                                        $display("[TB- SBD ] Test case %0d (write) pass!", total_cases);
+                                        $display("[TB- SBD ] Now error rate: %.2f%%", real'(mismatched) / total_cases * 100);
+                                    end
+                                    else 
+                                    begin
+                                        mismatched += 1;
+                                        if(wdata_g != apb_mon.wdata)
+                                            $display("[TB- SBD ] Test case %0d (write) fail, pwdata wrong!", total_cases);
+                                        if(addr_g != apb_mon.addr)
+                                            $display("[TB- SBD ] Test case %0d (write) fail, paddr wrong!", total_cases);
+                                        if(write_g != apb_mon.write)
+                                            $display("[TB- SBD ] Test case %0d (write) fail, pwrite wrong!", total_cases);
+                                        $display("[TB- SBD ] Now error rate: %.2f%%", real'(mismatched) / total_cases * 100);
+                                    end
+                                end
+                            end
+                            else
+                            begin
                                 total_cases += 1;
-                                for (int i = 0; i < 8; i++)  // get the data after mask
-                                begin
-                                    masked_data2[i*8 +: 8] = icb_mon2.wdata[i*8 +: 8] & {8{~icb_mon2.mask[i]}};
-                                end
-
-                                data_packet = key ^ masked_data2;
-
-                                wdata_g = data_packet[31:1];
-
-                                if(wdata_g == apb_mon.wdata && addr_g == apb_mon.addr && 
-                                   write_g == apb_mon.write)
-                                    $display("Scoreboard: Test case %d (write) pass!", total_cases);
-                                else 
-                                begin
-                                    mismatched += 1;
-                                    if(wdata_g != apb_mon.wdata)
-                                        $display("Scoreboard: Test case %d (write) fail, pwdata wrong!", total_cases);
-                                    if(addr_g != apb_mon.addr)
-                                        $display("Scoreboard: Test case %d (write) fail, paddr wrong!", total_cases);
-                                    if(write_g != apb_mon.write)
-                                        $display("Scoreboard: Test case %d (write) fail, pwrite wrong!", total_cases);
-                                    $display("Now error rate: %.2f%%", real'(mismatched) / total_cases * 100);
-                                end
+                                mismatched +=1;
+                                $display("[TB- SBD ] Test case %0d (ctrl) fail, psel wrong!", total_cases);
+                                $display("[TB- SBD ] Now error rate: %.2f%%", real'(mismatched) / total_cases * 100);
                             end
                         end
                     end
@@ -153,22 +165,24 @@ package scoreboard_pkg;
                             S1: this.apb2sb1.get(apb_mon);
                             S2: this.apb2sb2.get(apb_mon);
                             S3: this.apb2sb3.get(apb_mon);
-                            default: $display("APB slave selection signal error!");
+                            default: $display("[TB- SBD ] APB slave selection signal error!");
                         endcase
                         
                         total_cases += 1;
-                        
                         
                         rdata_g = {32'b0, apb_mon.rdata ^ key}; // encrypt
                         // $display("-----------------------------rdata_golden = %h", rdata_g);
 
                         if(rdata_g == icb_mon1.rdata)
-                            $display("Scoreboard: Test case %d (read) pass!", total_cases);
+                        begin
+                            $display("[TB- SBD ] Test case %0d (read) pass!", total_cases);
+                            $display("[TB- SBD ] Now error rate: %.2f%%", real'(mismatched) / total_cases * 100);
+                        end
                         else
                         begin
                             mismatched += 1;
-                            $display("Scoreboard: Test case %d (read) fail, prdata wrong!", total_cases);
-                            $display("Now error rate: %.2f%%", real'(mismatched) / total_cases * 100);
+                            $display("[TB- SBD ] Test case %0d (read) fail, prdata wrong!", total_cases);
+                            $display("[TB- SBD ] Now error rate: %.2f%%", real'(mismatched) / total_cases * 100);
                         end
                     end
                 end

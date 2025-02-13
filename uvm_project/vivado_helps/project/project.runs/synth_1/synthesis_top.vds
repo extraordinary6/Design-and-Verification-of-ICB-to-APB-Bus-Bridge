@@ -1,0 +1,266 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jan 28 03:09:29 2025
+# Process ID: 32084
+# Current directory: C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/project/project.runs/synth_1
+# Command line: vivado.exe -log synthesis_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source synthesis_top.tcl
+# Log file: C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/project/project.runs/synth_1/synthesis_top.vds
+# Journal file: C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/project/project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source synthesis_top.tcl -notrace
+Command: synth_design -top synthesis_top -part xc7k70tfbg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Device 21-403] Loading part xc7k70tfbg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7796
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1009.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'synthesis_top' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/synthesis_top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'icb_bus' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/icb_bus.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'icb_bus' (0#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/icb_bus.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'apb_bus' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_bus.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'apb_bus' (0#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_bus.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'apb_bus' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_bus.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'apb_bus' (0#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_bus.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'apb_bus' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_bus.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'apb_bus' (0#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_bus.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'apb_bus' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_bus.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'apb_bus' (0#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_bus.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'dut_top' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/top.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'icb_slave' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/icb_slave.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'icb_slave' (1#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/icb_slave.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'apb_master' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_master.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'apb_master' (2#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/apb_master.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'codec_des' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/codec_des.sv:10]
+	Parameter ENCRYPT bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'codec_des' (3#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/codec_des.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'codec_des__parameterized0' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/codec_des.sv:10]
+	Parameter ENCRYPT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'codec_des__parameterized0' (3#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/codec_des.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'fifo' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/fifo.sv:10]
+	Parameter BUF_SIZE bound to: 16 - type: integer 
+	Parameter ADDR_SIZE bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (4#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/fifo.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'fifo__parameterized0' [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/fifo.sv:10]
+	Parameter BUF_SIZE bound to: 16 - type: integer 
+	Parameter ADDR_SIZE bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo__parameterized0' (4#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/fifo.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'dut_top' (5#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/dut/top.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'synthesis_top' (6#1) [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/source/synthesis_top.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1009.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1009.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1009.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1009.539 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/constraint/timing_constrain.xdc]
+Finished Parsing XDC File [C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/constraint/timing_constrain.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1076.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1076.414 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1076.414 ; gain = 66.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1076.414 ; gain = 66.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1076.414 ; gain = 66.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1076.414 ; gain = 66.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 4     
++---XORs : 
+	   2 Input     48 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 4     
++---Registers : 
+	               64 Bit    Registers := 23    
+	               32 Bit    Registers := 20    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 12    
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   6 Input   64 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 13    
+	   2 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 250   
+	   6 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 6     
+	   7 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 52    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     9|
+|3     |LUT2  |   171|
+|4     |LUT3  |   193|
+|5     |LUT4  |   230|
+|6     |LUT5  |   142|
+|7     |LUT6  |  1006|
+|8     |MUXF7 |   220|
+|9     |MUXF8 |    96|
+|10    |FDCE  |  2203|
+|11    |IBUF  |   240|
+|12    |OBUF  |   335|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1556.836 ; gain = 547.297
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1556.836 ; gain = 480.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1556.836 ; gain = 547.297
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1556.836 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 316 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1556.836 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1556.836 ; gain = 547.297
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Xypher/Desktop/master/SV/finalProject/vivado_helps/project/project.runs/synth_1/synthesis_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file synthesis_top_utilization_synth.rpt -pb synthesis_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 28 03:10:06 2025...

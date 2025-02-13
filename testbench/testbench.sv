@@ -11,14 +11,16 @@
 
 `timescale 1ns/1ps
 
+`include "cfig.svh"
+
 module testbench_top ();
 
 //=====================================================================
 // Parameters
 //=====================================================================
 
-    parameter CLK_PERIOD1 = 10;
-    parameter CLK_PERIOD2 = 14;
+    parameter CLK_PERIOD1 = 20;       // ICB Clock Period
+    parameter CLK_PERIOD2 = 10;       // APB Clock Period
 
 //=====================================================================
 // Signals Declaration
@@ -142,19 +144,29 @@ program testbench(
         fork
             envctrl.run("Time_Run"); // time out limitation
 
-            envctrl.icb_agent.icb_monitor.collect_data();
-            envctrl.apb_agent0.apb_monitor.collect_data();
-            envctrl.apb_agent1.apb_monitor.collect_data();
-            envctrl.apb_agent2.apb_monitor.collect_data();
-            envctrl.apb_agent3.apb_monitor.collect_data();
-            envctrl.scoreboard.compare();
+            `ifdef DES
+
+            `else
+                envctrl.icb_agent.icb_monitor.collect_data();
+                envctrl.apb_agent0.apb_monitor.collect_data();
+                envctrl.apb_agent1.apb_monitor.collect_data();
+                envctrl.apb_agent2.apb_monitor.collect_data();
+                envctrl.apb_agent3.apb_monitor.collect_data();
+                envctrl.scoreboard.compare();
+            `endif 
   
             // The testcase you want to run
 
             begin
+                
+                // envctrl.run("ICB Write");  // test: ICB -> Bus Bridge -> APB
+                // envctrl.run("ICB Read");   // test: APB -> Bus Bridge -> ICB
+
                 // envctrl.run("WFIFO test"); // test: WFIFO empty & full siganl
-                envctrl.run("ICB Write");  // test: ICB -> Bus Bridge -> APB
-                envctrl.run("ICB Read");   // test: APB -> Bus Bridge -> ICB
+
+                // envctrl.run("APB Master test");
+
+                envctrl.run("DES test");
             end
 
 

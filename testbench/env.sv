@@ -173,7 +173,6 @@ package env;
 
                     $display("[TB- ENV ] Write WDATA register for fifo depth.");
                     for (int i = 0; i < 16; i = i + 1) begin
-
                         this.icb_agent.single_tran(1'b0, 8'h00, i, WDATA_ADDR);
                     end
 
@@ -183,9 +182,99 @@ package env;
                     this.icb_agent.single_tran(1'b0, 8'h00, 64'h0000_0000_0000_0001, CTRL_ADDR);
                     #1000;
                 end
+                "APB Master test": //test the cross clock domain issue: the mismatch of bus speed
+                begin
+                    $display("=============================================================");
+                    $display("[TB- ENV ] Start work : APB Master test !");
+
+                    $display("[TB- ENV ] Write KEY register.");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h0000_0000_ffff_ffff, KEY_ADDR);
+                    
+
+                    $display("[TB- ENV ] Write CTRL register.");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h0000_0000_0000_0001, CTRL_ADDR);
+
+                    $display("[TB- ENV ] Write WDATA register for control packet1");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h0000_0000_ffff_fef9, WDATA_ADDR);
+
+                    #100;
+
+                    $display("[TB- ENV ] Write WDATA register for data packet1");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h0000_0000_ffff_ffee, WDATA_ADDR);
+
+                    #200;
+
+                    this.apb_agent0.single_tran(32'h0000_1234);
+
+                    #100;
+
+                    $display("[TB- ENV ] Write WDATA register for control packet2");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h0000_0000_ffff_fdf5, WDATA_ADDR);
+
+                    #100;
+
+                    $display("[TB- ENV ] Write WDATA register for data packet2");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h0000_0000_ffff_fff0, WDATA_ADDR);
+
+                    #200;
+
+                    this.apb_agent1.single_tran(32'h0000_4321);
+
+                    #1000;
+
+                end
+                "DES test": //test the DES and the transport, only can be tested when "`define DES" in cfig.svh
+                begin
+                    $display("=============================================================");
+                    $display("[TB- ENV ] Start work : APB Master test !");
+
+                    $display("[TB- ENV ] Write KEY register.");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h133457799bbcdff1, KEY_ADDR); // des key
+                    
+
+                    $display("[TB- ENV ] Write CTRL register.");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h0000000000000001, CTRL_ADDR);
+
+                    $display("[TB- ENV ] Write WDATA register for control packet1");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h5445EC6F0A919646, WDATA_ADDR);
+
+                    #400;
+
+                    $display("[TB- ENV ] Write WDATA register for data packet1");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'hA7C678BF3C3011CF, WDATA_ADDR);
+
+                    this.apb_agent0.single_tran(32'h0000_1234);
+
+                    #400;
+
+                    $display("[TB- ENV ] Write WDATA register for control packet2");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'h2DD5E9BEEAB99163, WDATA_ADDR);
+
+                    #400;
+
+                    $display("[TB- ENV ] Write WDATA register for data packet2");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'hC11B90D1268ED889, WDATA_ADDR);
+
+                    this.apb_agent1.single_tran(32'h0000_4321);
+
+                    #400;
+
+                    $display("[TB- ENV ] Write WDATA register for control packet3");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'hC9FBC100381280B1, WDATA_ADDR);
+
+                    #400;
+
+                    $display("[TB- ENV ] Write WDATA register for data packet3(meaningless)");
+                    this.icb_agent.single_tran(1'b0, 8'h00, 64'hA7C678BF3C3011CF, WDATA_ADDR);
+
+                    this.apb_agent0.single_tran(32'h0000_4444);
+
+
+                    #1000;
+                end
                 "Time_Run": begin
                     $display("[TB- ENV ] start work : Time_Run !");
-                    #100000;
+                    # 100000;
                     $display("[TB- ENV ] =========================================================================================");
                     $display("[TB- ENV ]  _|_|_|_|_|   _|_|_|   _|      _|   _|_|_|_|         _|_|     _|    _|   _|_|_|_|_|  ");
                     $display("[TB- ENV ]      _|         _|     _|_|  _|_|   _|             _|    _|   _|    _|       _|      ");

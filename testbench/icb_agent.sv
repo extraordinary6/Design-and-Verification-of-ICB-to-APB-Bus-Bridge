@@ -218,7 +218,7 @@ package icb_agent_pkg;
         task automatic collect_data();
             icb_trans transaction;
 
-            $display("ICB Agent Collect Data Program Begin !");
+            $display("[TB- IAG ] ICB Agent Collect Data Program Begin !");
             
 
             forever begin

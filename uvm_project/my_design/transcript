@@ -1,0 +1,217 @@
+# vsim -c -sv_lib D:/questasim/questa_sim/uvm-1.2/win64/uvm_dpi work.my_top -novopt "+UVM_TESTNAME=test0" 
+# Start time: 00:06:44 on Jan 28,2025
+# Loading C:/Users/Xypher/AppData/Local/Temp\Xypher@LAPTOP-BTLH03U0_dpi_38672\win64_gcc-14.2.0\export_tramp.dll
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# //  Questa Sim-64
+# //  Version 10.6c win64 Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.my_top
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.icb_bus
+# Loading sv_std.std
+# Loading work.icb_bus
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.apb_bus
+# Loading work.apb_bus
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.my_test_pkg
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.my_env_pkg
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.my_agent_pkg
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.my_sequence_pkg
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.uvm_pkg
+# Loading work.uvm_pkg
+# Loading work.my_sequence_pkg
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.my_agent_pkg
+# Loading work.my_env_pkg
+# Loading work.my_test_pkg
+# Loading work.my_top
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.dut
+# Loading work.dut
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.dut_top
+# Loading work.dut_top
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.icb_slave
+# Loading work.icb_slave
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.apb_master
+# Loading work.apb_master
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.codec_des
+# Loading work.codec_des
+# Refreshing C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/work.fifo
+# Loading work.fifo
+# Compiling C:/Users/Xypher/AppData/Local/Temp\Xypher@LAPTOP-BTLH03U0_dpi_38672\win64_gcc-14.2.0\exportwrapper.c
+# Loading C:/Users/Xypher/AppData/Local/Temp\Xypher@LAPTOP-BTLH03U0_dpi_38672\win64_gcc-14.2.0\vsim_auto_compile.dll
+# Loading D:/questasim/questa_sim/uvm-1.2/win64/uvm_dpi.dll
+# UVM_INFO D:/questasim/questa_sim/verilog_src/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test test0...
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_test_pkg.sv(69) @ 0: uvm_test_top [my_test] ENV_CFG(s) set into config_db
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(891) @ 0: uvm_test_top.env[0] [my_env] AGENT_CFG(s) set into config_db
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(891) @ 0: uvm_test_top.env[1] [my_env] AGENT_CFG(s) set into config_db
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(891) @ 0: uvm_test_top.env[2] [my_env] AGENT_CFG(s) set into config_db
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(891) @ 0: uvm_test_top.env[3] [my_env] AGENT_CFG(s) set into config_db
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 646000: uvm_test_top.env[0].scb [my_scoreboard] Case 1 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 646000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 1066000: uvm_test_top.env[0].scb [my_scoreboard] Case 2 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 1066000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 1486000: uvm_test_top.env[0].scb [my_scoreboard] Case 3 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 1486000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 1906000: uvm_test_top.env[0].scb [my_scoreboard] Case 4 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 1906000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 2326000: uvm_test_top.env[0].scb [my_scoreboard] Case 5 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 2326000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 2746000: uvm_test_top.env[0].scb [my_scoreboard] Case 6 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 2746000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 3166000: uvm_test_top.env[0].scb [my_scoreboard] Case 7 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 3166000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 3586000: uvm_test_top.env[0].scb [my_scoreboard] Case 8 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 3586000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4006000: uvm_test_top.env[0].scb [my_scoreboard] Case 9 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4006000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4426000: uvm_test_top.env[0].scb [my_scoreboard] Case 10 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4426000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4586000: uvm_test_top.env[1].scb [my_scoreboard] Case 1 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4586000: uvm_test_top.env[1].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4606000: uvm_test_top.env[1].scb [my_scoreboard] Case 2 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4606000: uvm_test_top.env[1].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4626000: uvm_test_top.env[1].scb [my_scoreboard] Case 3 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4626000: uvm_test_top.env[1].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4646000: uvm_test_top.env[1].scb [my_scoreboard] Case 4 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4646000: uvm_test_top.env[1].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4666000: uvm_test_top.env[1].scb [my_scoreboard] Case 5 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4666000: uvm_test_top.env[1].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4686000: uvm_test_top.env[1].scb [my_scoreboard] Case 6 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4686000: uvm_test_top.env[1].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4706000: uvm_test_top.env[1].scb [my_scoreboard] Case 7 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4706000: uvm_test_top.env[1].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4726000: uvm_test_top.env[1].scb [my_scoreboard] Case 8 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4726000: uvm_test_top.env[1].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 4846000: uvm_test_top.env[0].scb [my_scoreboard] Case 11 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 4846000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 5266000: uvm_test_top.env[0].scb [my_scoreboard] Case 12 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 5266000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 5686000: uvm_test_top.env[0].scb [my_scoreboard] Case 13 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 5686000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 6106000: uvm_test_top.env[0].scb [my_scoreboard] Case 14 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 6106000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 6526000: uvm_test_top.env[0].scb [my_scoreboard] Case 15 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 6526000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(750) @ 6946000: uvm_test_top.env[0].scb [my_scoreboard] Case 16 (Write) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(751) @ 6946000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 9985000: uvm_test_top.env[2].scb [my_scoreboard] Case 1 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 9985000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10005000: uvm_test_top.env[2].scb [my_scoreboard] Case 2 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10005000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10025000: uvm_test_top.env[2].scb [my_scoreboard] Case 3 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10025000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10045000: uvm_test_top.env[2].scb [my_scoreboard] Case 4 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10045000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10065000: uvm_test_top.env[2].scb [my_scoreboard] Case 5 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10065000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10085000: uvm_test_top.env[2].scb [my_scoreboard] Case 6 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10085000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10105000: uvm_test_top.env[2].scb [my_scoreboard] Case 7 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10105000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10125000: uvm_test_top.env[2].scb [my_scoreboard] Case 8 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10125000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10145000: uvm_test_top.env[2].scb [my_scoreboard] Case 9 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10145000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10165000: uvm_test_top.env[2].scb [my_scoreboard] Case 10 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10165000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10185000: uvm_test_top.env[2].scb [my_scoreboard] Case 11 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10185000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10205000: uvm_test_top.env[2].scb [my_scoreboard] Case 12 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10205000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10225000: uvm_test_top.env[2].scb [my_scoreboard] Case 13 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10225000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10245000: uvm_test_top.env[2].scb [my_scoreboard] Case 14 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10245000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10265000: uvm_test_top.env[2].scb [my_scoreboard] Case 15 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10265000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 10285000: uvm_test_top.env[2].scb [my_scoreboard] Case 16 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 10285000: uvm_test_top.env[2].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15765000: uvm_test_top.env[0].scb [my_scoreboard] Case 17 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15765000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15785000: uvm_test_top.env[0].scb [my_scoreboard] Case 18 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15785000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15805000: uvm_test_top.env[0].scb [my_scoreboard] Case 19 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15805000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15825000: uvm_test_top.env[0].scb [my_scoreboard] Case 20 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15825000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15845000: uvm_test_top.env[0].scb [my_scoreboard] Case 21 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15845000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15865000: uvm_test_top.env[0].scb [my_scoreboard] Case 22 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15865000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15885000: uvm_test_top.env[0].scb [my_scoreboard] Case 23 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15885000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15905000: uvm_test_top.env[0].scb [my_scoreboard] Case 24 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15905000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15925000: uvm_test_top.env[0].scb [my_scoreboard] Case 25 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15925000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15945000: uvm_test_top.env[0].scb [my_scoreboard] Case 26 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15945000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15965000: uvm_test_top.env[0].scb [my_scoreboard] Case 27 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15965000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 15985000: uvm_test_top.env[0].scb [my_scoreboard] Case 28 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 15985000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 16005000: uvm_test_top.env[0].scb [my_scoreboard] Case 29 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 16005000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 16025000: uvm_test_top.env[0].scb [my_scoreboard] Case 30 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 16025000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 16045000: uvm_test_top.env[0].scb [my_scoreboard] Case 31 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 16045000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(801) @ 16065000: uvm_test_top.env[0].scb [my_scoreboard] Case 32 (Read) check PASSED!
+# UVM_INFO C:\Users\Xypher\Desktop\master\SV\finalProject\my_design\tb\my_env_pkg.sv(802) @ 16065000: uvm_test_top.env[0].scb [my_scoreboard] Now error rate is 0.00%
+# UVM_INFO D:/questasim/questa_sim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1271) @ 19065000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+###########################################
+############    TEST PASSED    ############
+###########################################
+# UVM_INFO D:/questasim/questa_sim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 19065000: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  120
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVM/RELNOTES]     1
+# [my_env]     4
+# [my_scoreboard]   112
+# [my_test]     1
+# 
+# ** Note: $finish    : D:/questasim/questa_sim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 19065 ns  Iteration: 67  Instance: /my_top
+# End time: 00:07:40 on Jan 28,2025, Elapsed time: 0:00:56
+# Errors: 0, Warnings: 1

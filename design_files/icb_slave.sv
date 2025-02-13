@@ -5,12 +5,15 @@
 // Designer : Huang Chaofan, extraordinary.h@sjtu.edu.cn
 // Revision History:
 // V0 date: 10.31 Initial version, Huang Chaofan
+// V1 date: 12.13 Second  version, Huang Chaofan, add the " `ifdef " for des
 // ====================================================================
 `define CONTROL_ADDR 32'h20000000
 `define STATE_ADDR   32'h20000008
 `define WDATA_ADDR   32'h20000010
 `define RDATA_ADDR   32'h20000018
 `define KEY_ADDR     32'h20000020
+
+`include "cfig.svh"
 
 module icb_slave(
 
@@ -26,10 +29,11 @@ module icb_slave(
     output logic        wfifo_wen,
     output logic        rfifo_ren,        
 
-    output logic [63:0] control, //write or read, APB enable signal
-    output logic [63:0] wdata,   //write or read, OUTPUT for decrypt
-    output logic [63:0] key      //write or read, OUTPUT for decrypt and encrypt
+    output logic [63:0] control,   //write or read, APB enable signal
+    output logic [63:0] wdata,     //write or read, OUTPUT for decrypt
+    output logic [63:0] key,       //write or read, OUTPUT for decrypt and encrypt
 
+    output logic        wdata_vld
 );
 
 // register file 
@@ -141,6 +145,17 @@ begin
 		wdata <= masked_wdata;
 end
 
+// add the wdata_vld, 12.13
+always_ff@(posedge icb_bus.clk or negedge icb_bus.rst_n)
+begin
+    if(!icb_bus.rst_n)
+        wdata_vld <= 0;
+    else if(icb_bus.icb_cmd_valid && icb_bus.icb_cmd_ready && icb_bus.icb_cmd_addr == `WDATA_ADDR && ~icb_bus.icb_cmd_read && ~wfifo_full)
+		wdata_vld <= 1;
+    else
+        wdata_vld <= 0;
+end
+
 //key
 always_ff@(posedge icb_bus.clk or negedge icb_bus.rst_n)
 begin
@@ -156,16 +171,49 @@ Interactive signal with FIFO and codec
 */
 
 //wfifo_wen
-always_ff@(posedge icb_bus.clk or negedge icb_bus.rst_n)
-begin
-    if(!icb_bus.rst_n)
-	    wfifo_wen <= 0;
-    else if(icb_bus.icb_cmd_valid && icb_bus.icb_cmd_ready && icb_bus.icb_cmd_addr == `WDATA_ADDR && ~icb_bus.icb_cmd_read && ~wfifo_full)
-        wfifo_wen <= 1;
-    else 
-        wfifo_wen <= 0;
-end
+`ifdef DES
+    logic [3:0] cnt;
+    logic start;
 
+    always_ff @(posedge icb_bus.clk or negedge icb_bus.rst_n) 
+    begin
+        if(!icb_bus.rst_n)
+            start <= 0;
+        else if(wdata_vld)
+            start <= 1;
+        else if(cnt == 15)
+            start <= 0;
+    end
+
+    always_ff @(posedge icb_bus.clk or negedge icb_bus.rst_n) 
+    begin
+        if(!icb_bus.rst_n)
+            cnt <= 0;
+        else if(start)
+            cnt <= cnt + 1;
+    end
+
+    always_ff @(posedge icb_bus.clk or negedge icb_bus.rst_n) 
+    begin
+        if(!icb_bus.rst_n)
+            wfifo_wen <= 0;
+        else if(cnt == 15)
+            wfifo_wen <= 1;
+        else
+            wfifo_wen <= 0;
+    end
+
+`else
+    always_ff@(posedge icb_bus.clk or negedge icb_bus.rst_n)
+    begin
+        if(!icb_bus.rst_n)
+            wfifo_wen <= 0;
+        else if(icb_bus.icb_cmd_valid && icb_bus.icb_cmd_ready && icb_bus.icb_cmd_addr == `WDATA_ADDR && ~icb_bus.icb_cmd_read && ~wfifo_full)
+            wfifo_wen <= 1;
+        else 
+            wfifo_wen <= 0;
+    end
+`endif
 //rfifo_ren
 always_comb
 begin

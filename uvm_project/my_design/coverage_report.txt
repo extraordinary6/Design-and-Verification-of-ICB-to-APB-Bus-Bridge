@@ -1,0 +1,219 @@
+Coverage Report Summary Data by file
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/../rtl/apb_bus.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           12        12         0     100.0
+    Branches                         0         0         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    204       185        19      90.6
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/../rtl/apb_master.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                          108       107         1      99.0
+    Branches                       103       102         1      99.0
+    FEC Condition Terms             55        50         5      90.9
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                        90.0
+        States                       3         3         0     100.0
+        Transitions                  5         4         1      80.0
+    Toggle Bins                    432       284       148      65.7
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/../rtl/codec_des.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           38        38         0     100.0
+    Branches                        20        20         0     100.0
+    FEC Condition Terms              3         3         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    994       663       331      66.7
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/../rtl/fifo.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           30        30         0     100.0
+    Branches                        24        24         0     100.0
+    FEC Condition Terms              8         4         4      50.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    416       351        65      84.3
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/../rtl/icb_bus.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           14        14         0     100.0
+    Branches                         0         0         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    352       293        59      83.2
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/../rtl/icb_slave.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           60        59         1      98.3
+    Branches                        49        48         1      97.9
+    FEC Condition Terms              2         1         1      50.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    926       594       332      64.1
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/../rtl/top.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            0         0         0     100.0
+    Branches                         0         0         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                   1044       818       226      78.3
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/des_assertion.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            0         0         0     100.0
+    Branches                         0         0         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    392       301        91      76.7
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/fifo_assertion.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            0         0         0     100.0
+    Branches                         0         0         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                    332       330         2      99.3
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/icb_assertion.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            3         3         0     100.0
+    Branches                         2         2         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                      2         2         0     100.0
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/my_agent_pkg.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           98        77        21      78.5
+    Branches                        34        15        19      44.1
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                      0         0         0     100.0
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/my_env_pkg.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                          271       232        39      85.6
+    Branches                        91        39        52      42.8
+    FEC Condition Terms             13         6         7      46.1
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                      0         0         0     100.0
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/my_sequence_pkg.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                          404       166       238      41.0
+    Branches                       314        31       283       9.8
+    FEC Condition Terms              3         3         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                      0         0         0     100.0
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/my_test_pkg.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                          185       142        43      76.7
+    Branches                        12         4         8      33.3
+    FEC Condition Terms              2         0         2       0.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                      0         0         0     100.0
+
+=================================================================================
+=== File: C:/Users/Xypher/Desktop/master/SV/finalProject/my_design/tb/my_top.sv
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           21        21         0     100.0
+    Branches                         0         0         0     100.0
+    FEC Condition Terms              0         0         0     100.0
+    FEC Expression Terms             0         0         0     100.0
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+    Toggle Bins                      6         5         1      83.3
+
+
+TOTAL COVERGROUP COVERAGE: 100.0%  COVERGROUP TYPES: 2
+
+TOTAL ASSERTION COVERAGE: 80.8%  ASSERTIONS: 335
+
+Total Coverage By File (code coverage only, filtered view): 71.8%
+

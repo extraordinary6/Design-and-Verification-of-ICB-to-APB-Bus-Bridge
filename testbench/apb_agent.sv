@@ -136,7 +136,7 @@ package apb_agent_pkg;
         // ...
         task automatic collect_data();
             apb_trans   rsp_trans;
-            $display("APB Agent %d Collect Data Program Begin !", ins_id);
+            $display("[TB- AAG ] APB Agent %0d Collect Data Program Begin !", ins_id);
             
             forever begin
                 while(!(this.active_channel.penable))

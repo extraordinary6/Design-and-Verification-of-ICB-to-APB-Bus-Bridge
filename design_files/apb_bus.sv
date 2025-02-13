@@ -2,6 +2,9 @@
 /// Description: 
 // the interface of apb
 // Designer : sjl_519021910940@sjtu.edu.cn
+// V0 date: 2024/10/23  Initial version, sjl_519021910940@sjtu.edu.cn
+// V1 date: 2024/11/24  Add clocking blocks, extraordinary.h@sjtu.edu.cn
+// V2 date: 2024/12/14  Adding "other" modport, extraordinary.h@sjtu.edu.cn
 // ==================================================================== 
 
 /*
@@ -34,11 +37,26 @@ interface apb_bus(input logic clk,input logic rst_n);
         output pready;
     endclocking
 
+    // Mod ports
     modport slave(clocking slv_cb,
     output prdata,pready,
     input pwrite,psel,paddr,pwdata,penable,rst_n);
 
     modport master(output pwrite,psel,paddr,pwdata,penable,
     input prdata,pready,clk,rst_n);
+
+    modport others (
+        input    clk,
+        input    rst_n,
+        
+        input    pwrite,
+        input    psel,
+        input    paddr,
+        input    pwdata,
+        input    penable,
+        input    prdata,
+        input    pready
+
+    );
 
 endinterface:apb_bus //apb    
